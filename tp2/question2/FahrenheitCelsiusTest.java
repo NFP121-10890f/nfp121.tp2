@@ -47,20 +47,31 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase
      */
     protected void setUp() // throws java.lang.Exception
     {
-        // Initialisez ici vos engagements
+        System.out.println("Test commence");
 
     }
 
     /**
      * Supprime les engagements
-     *
+     * 
      * Méthode appelée après chaque appel de méthode de test.
      */
     protected void tearDown() // throws java.lang.Exception
     {
-        //Libérez ici les ressources engagées par setUp()
+        System.out.println("Test termine");
     }
-
+    
+    public void test_0C(){
+        assertTrue(FahrenheitCelsius.fahrenheitEnCelsius(0) == (float)-17.8);
+    }
+    
+    public void test_100C(){
+        assertTrue(FahrenheitCelsius.fahrenheitEnCelsius(100) == (float)37.7);
+    }
+    
+    public void test_2006C(){
+        assertTrue(FahrenheitCelsius.fahrenheitEnCelsius(2006) == (float)1096.6);
+    }
     /**
      * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test.
      * Ces méthodes doivent vérifier les résultats attendus à l'aide d'assertions
